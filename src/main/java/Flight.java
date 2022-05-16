@@ -1,41 +1,37 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Flight {
 
+    List<Flight> flights;
     private String destination;
     private String flightID;
     List<Passenger> passengerList;
 
-    public Flight(String destination, String flightID) {
+
+    public Flight(List<Flight> flights, String destination, String flightID) {
+        this.flights = new ArrayList<>();
         this.destination = destination;
         this.flightID = flightID;
-        //this.passengerList = new List<PassengerList>();
 
     }
 
-//    Getters & Setters
+    public Flight() {}
 
-    public String getDestination() {
-        return destination;
+    public List<Flight> getFlights() {
+        return flights;
     }
 
-    public void setDestination(String destination) {
-        this.destination = destination;
+    public void setFlightList(List<Flight> flightList) {
+        this.flights = flights;
     }
 
-    public String getFlightID() {
-        return flightID;
+    public void addFlight (Flight flight){
+        this.flights.add(flight);
     }
 
-    public void setFlightID(String flightID) {
-        this.flightID = flightID;
-    }
-
-    public List<Passenger> getPassengerList() {
-        return passengerList;
-    }
-
-    public void setPassengerList(List<Passenger> passengerList) {
-        this.passengerList = passengerList;
+    public void cancelFlight(Flight flight){
+        this.flights.remove(flight);
     }
 }
+
