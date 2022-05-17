@@ -33,5 +33,15 @@ public class Flight {
     public void cancelFlight(Flight flight){
         this.flights.remove(flight);
     }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "flights=" + flights +
+                ", destination='" + destination + '\'' +
+                ", flightID='" + flightID + '\'' +
+                ", passengerList=" + passengerList +
+                '}';
+    }
 }
 

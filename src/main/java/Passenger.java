@@ -5,7 +5,7 @@ public class Passenger {
     private String passengerName;
     private String phoneNumber;
     private String passengerID;
-
+    //private Passenger passengerList;
     List<Passenger> passengerList;
 
     public Passenger() {}
